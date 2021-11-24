@@ -2,8 +2,8 @@
 Automated test with selenium written in Java
 
 ## Prerequisites
-Latest version of JDK\
-Have apache-maven installed - https://devwithus.com/install-maven-windows/
+Install latest version of JDK\
+Install apache-maven - https://devwithus.com/install-maven-windows/
  
 # Getting Started
 These instructions will get you a copy of the project up and running on your local machine.
