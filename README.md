@@ -13,10 +13,10 @@ Clone the repository onto your local machine using git clone https://github.com/
 
 After cloning, do the following:
 
-  cd qa-take-home-test
-  npm install
-  npm start
-NB: You need Nodejs/NPM on your local machine for this project to work
-
-Every element has a data-test-id associated with it.
+  cd MPharmaTest                       
+  mvn clean
+  mvn test
+  
+# NB: As stated in the prerequisites, you need to have maven installed to be able to use the maven commands
+# Maven downloads all required dependencies when the "mvn test" command is run
  
