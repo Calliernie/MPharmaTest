@@ -5,11 +5,11 @@ import org.openqa.selenium.WebDriver;
 public class PatientCreationPageLocators {
     private WebDriver driver;
     //locators for targeting input elements while adding a new patient
-    private String firstName_name = "firstName";
-    public String middleName_name = "middleName";
-    private String lastName_name = "lastName";
-    private String phoneNumber_name = "phoneNumber";
-    private String dateOfBirth_name = "dob";
+    private String firstName_xpath = "//input[@data-test-id='first-name']";
+    public String middleName_xpath = "//input[@data-test-id='middle-name']";
+    private String lastName_xpath = "//input[@data-test-id='last-name']";
+    private String phoneNumber_xpath = "//input[@data-test-id='phone-number']";
+    private String dateOfBirth_xpath = "//input[@data-test-id='dob']";
     private String address_xpath = "//*[@id=\"root\"]/div/div[1]/main/div[4]/textarea";
     private String addNewUserButton_xpath = "//*[@id=\"root\"]/div/div[1]/div/a";
 
@@ -18,24 +18,24 @@ public class PatientCreationPageLocators {
     private String createdUserAddress = "//*[@id=\"root\"]/div/div[2]/main/div[1]/div[2]/p[1]";
     private String createdUserDateOfBirth = "//*[@id=\"root\"]/div/div[2]/main/div[1]/div[2]/p[2]";
 
-    public String getFirstName_name() {
-        return firstName_name;
+    public String getFirstName_xpath() {
+        return firstName_xpath;
     }
 
-    public String getMiddleName_name() {
-        return middleName_name;
+    public String getMiddleName_xpath() {
+        return middleName_xpath;
     }
 
-    public String getLastName_name() {
-        return lastName_name;
+    public String getLastName_xpath() {
+        return lastName_xpath;
     }
 
-    public String getPhoneNumber_name() {
-        return phoneNumber_name;
+    public String getPhoneNumber_xpath() {
+        return phoneNumber_xpath;
     }
 
-    public String getDateOfBirth_name() {
-        return dateOfBirth_name;
+    public String getDateOfBirth_xpath() {
+        return dateOfBirth_xpath;
     }
 
     public String getAddress_xpath() {

@@ -22,27 +22,27 @@ public class PatientCreationPage extends PatientCreationPageLocators {
 
     public void typeFirstName() {
         driver.findElement(
-                By.name(getFirstName_name())).sendKeys(firstName);
+                By.xpath(getFirstName_xpath())).sendKeys(firstName);
     }
 
     public void typeMiddleName() {
         driver.findElement(
-                By.name(getMiddleName_name())).sendKeys(middleName);
+                By.xpath(getMiddleName_xpath())).sendKeys(middleName);
     }
 
     public void typeLastName() {
         driver.findElement(
-                By.name(getLastName_name())).sendKeys(lastName);
+                By.xpath(getLastName_xpath())).sendKeys(lastName);
     }
 
     public void typePhoneNumber() {
         driver.findElement(
-                By.name(getPhoneNumber_name())).sendKeys(phoneNumber);
+                By.xpath(getPhoneNumber_xpath())).sendKeys(phoneNumber);
     }
 
     public void typeDateOfBirth() {
         driver.findElement(
-                By.name(getDateOfBirth_name())).sendKeys(dateOfBirth);
+                By.xpath(getDateOfBirth_xpath())).sendKeys(dateOfBirth);
     }
 
     public void typeAddress() {
