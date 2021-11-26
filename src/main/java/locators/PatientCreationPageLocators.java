@@ -10,8 +10,8 @@ public class PatientCreationPageLocators {
     private String lastName_xpath = "//input[@data-test-id='last-name']";
     private String phoneNumber_xpath = "//input[@data-test-id='phone-number']";
     private String dateOfBirth_xpath = "//input[@data-test-id='dob']";
-    private String address_xpath = "//*[@id=\"root\"]/div/div[1]/main/div[4]/textarea";
-    private String addNewUserButton_xpath = "//*[@id=\"root\"]/div/div[1]/div/a";
+    private String address_xpath = "//textarea[@data-test-id='address']";
+    private String addNewUserButton_xpath = "//a[@data-test-id='submit-btn']";
 
     //locators for checking the newly added patient
     private String createdUserFullName_xpath = "//*[@id=\"root\"]/div/div[2]/main/div[1]/div[2]/h4";
