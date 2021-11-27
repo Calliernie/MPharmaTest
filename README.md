@@ -14,8 +14,9 @@ Clone the repository onto your local machine using git clone https://github.com/
 After cloning, do the following:
 
 - cd MPharmaTest
-- mvn clean(to check that all dependencies are properly configured)
-- mvn test(to run the test)
+- change path to the feature file in the RunCucumberTest.java file
+- open a terminal and run mvn clean(to check that all dependencies are properly configured)
+- run mvn test(to run the test)
   
 ##### NB: As stated in the prerequisites, you need to have maven installed to be able to use the maven commands
 ##### Maven downloads all required dependencies when the "mvn test" command is run
