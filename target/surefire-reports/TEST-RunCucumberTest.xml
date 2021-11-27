@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="1" failures="0" name="main.MainTest" time="6.208" errors="0" skipped="0">
+<testsuite tests="1" failures="0" name="RunCucumberTest" time="8.728" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="java.vm.version" value="17.0.1+12-LTS-39"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-17.0.1\bin"/>
-    <property name="maven.multiModuleProjectDirectory" value="C:\Users\dell\Documents\MPharmaTest"/>
+    <property name="maven.multiModuleProjectDirectory" value="C:\Users\dell\Documents\GitHub\MPharmaTest"/>
     <property name="java.vm.vendor" value="Oracle Corporation"/>
     <property name="java.vendor.url" value="https://java.oracle.com/"/>
     <property name="guice.disable.misplaced.annotation.check" value="true"/>
@@ -15,7 +15,7 @@
     <property name="user.country" value="US"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
-    <property name="user.dir" value="C:\Users\dell\Documents\MPharmaTest"/>
+    <property name="user.dir" value="C:\Users\dell\Documents\GitHub\MPharmaTest"/>
     <property name="java.vm.compressedOopsMode" value="32-bit"/>
     <property name="java.runtime.version" value="17.0.1+12-LTS-39"/>
     <property name="os.arch" value="amd64"/>
@@ -61,5 +61,5 @@
     <property name="sun.stdout.encoding" value="cp437"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="main.MainTest" name="createNewPatient" time="6.208"/>
+  <testcase classname="Patient Creation" name="Adding a patient&apos;s details to the database" time="8.728"/>
 </testsuite>

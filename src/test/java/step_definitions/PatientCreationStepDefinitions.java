@@ -1,13 +1,19 @@
-package pages;
+package step_definitions;
 
+import config.Setup;
+import cucumber.api.java.en.And;
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
 import locators.PatientCreationPageLocators;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class PatientCreationPage extends PatientCreationPageLocators {
+public class PatientCreationStepDefinitions extends Setup {
+    WebDriver driver = getDriver();
+    PatientCreationPageLocators locators = new PatientCreationPageLocators();
 
-    private WebDriver driver;
     private String firstName = "Ernest";
     private String middleName = "Kwame";
     private String lastName = "Amuzu";
@@ -16,54 +22,60 @@ public class PatientCreationPage extends PatientCreationPageLocators {
     private String address = "C/O RUTH ESI AMUZU, U.P.O.BOX 63, KNUST - KUMASI,GHANA";
     private String fullName = firstName + " " + middleName + " " + lastName;
 
-    public PatientCreationPage(WebDriver driver) {
-        this.driver = driver;
-    }
-
+    @Given("I type the patient's first name")
     public void typeFirstName() {
         driver.findElement(
-                By.xpath(getFirstName_xpath())).sendKeys(firstName);
+                By.xpath(locators.getFirstName_xpath())).sendKeys(firstName);
     }
 
+    @And("I type the patient's middle name")
     public void typeMiddleName() {
         driver.findElement(
-                By.xpath(getMiddleName_xpath())).sendKeys(middleName);
+                By.xpath(locators.getMiddleName_xpath())).sendKeys(middleName);
     }
 
+    @And("I type the patient's last name")
     public void typeLastName() {
         driver.findElement(
-                By.xpath(getLastName_xpath())).sendKeys(lastName);
+                By.xpath(locators.getLastName_xpath())).sendKeys(lastName);
     }
 
+    @And("I type the patient's phone number")
     public void typePhoneNumber() {
         driver.findElement(
-                By.xpath(getPhoneNumber_xpath())).sendKeys(phoneNumber);
+                By.xpath(locators.getPhoneNumber_xpath())).sendKeys(phoneNumber);
     }
 
+    @And("I type the patient's date of birth")
     public void typeDateOfBirth() {
         driver.findElement(
-                By.xpath(getDateOfBirth_xpath())).sendKeys(dateOfBirth);
+                By.xpath(locators.getDateOfBirth_xpath())).sendKeys(dateOfBirth);
     }
 
+    @And("I type the patient's address")
     public void typeAddress() {
         driver.findElement(
-                By.xpath(getAddress_xpath())).sendKeys(address);
+                By.xpath(locators.getAddress_xpath())).sendKeys(address);
     }
 
+    @When("I click on the add new user button")
     public void clickAddNewUserButton() {
         driver.findElement(
-                By.xpath(getAddNewUserButton_xpath())).click();
+                By.xpath(locators.getAddNewUserButton_xpath())).click();
     }
 
+    @Then("I should see the added patient's full name")
     public void checkCreatedPatientName() {
-        Assert.assertEquals(fullName, driver.findElement(By.xpath(getCreatedUserFullName_xpath())).getText());
+        Assert.assertEquals(fullName, driver.findElement(By.xpath(locators.getCreatedUserFullName_xpath())).getText());
     }
 
+    @And("I should see the added patient's address")
     public void checkCreatedPatientAddress() {
-        Assert.assertTrue(driver.findElement(By.xpath(getCreatedUserAddress())).getText().contains(address));
+        Assert.assertTrue(driver.findElement(By.xpath(locators.getCreatedUserAddress())).getText().contains(address));
     }
 
-    public void checkCreatedPatientDateOfBirth() {
+    @And("I should see the added patient's date of birth")
+    public void checkCreatedPatientDateOfBirth() throws InterruptedException {
         String month = dateOfBirth.substring(0, 2);
         String day = dateOfBirth.substring(2, 4);
         String year = dateOfBirth.substring(4, 8);
@@ -73,8 +85,9 @@ public class PatientCreationPage extends PatientCreationPageLocators {
         System.out.println(year);
 
         String finalDate = formatDay(day) + " " + getMonth(month) + " " + year;
-        String realDate = driver.findElement(By.xpath(getCreatedUserDateOfBirth())).getText();
+        String realDate = driver.findElement(By.xpath(locators.getCreatedUserDateOfBirth())).getText();
         Assert.assertTrue(realDate.contains(finalDate));
+        Thread.sleep(5000);
     }
 
     public String formatDay(String day) {

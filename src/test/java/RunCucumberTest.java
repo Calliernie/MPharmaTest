@@ -1,0 +1,10 @@
+import config.Setup;
+import cucumber.api.CucumberOptions;
+import cucumber.api.junit.Cucumber;
+import org.junit.runner.RunWith;
+
+@RunWith(Cucumber.class)
+@CucumberOptions(features = "C://Users/dell/Documents/GitHub/MPharmaTest/src/test/java", plugin = {"pretty"})
+
+public class RunCucumberTest extends Setup {
+}

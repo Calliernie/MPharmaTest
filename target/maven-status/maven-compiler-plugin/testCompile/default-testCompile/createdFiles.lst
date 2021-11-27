@@ -1,1 +1,4 @@
-main\MainTest.class
+config\Setup.class
+locators\PatientCreationPageLocators.class
+RunCucumberTest.class
+step_definitions\PatientCreationStepDefinitions.class

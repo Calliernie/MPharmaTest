@@ -1,9 +1,11 @@
 package locators;
 
+import config.Setup;
 import org.openqa.selenium.WebDriver;
 
-public class PatientCreationPageLocators {
-    private WebDriver driver;
+public class PatientCreationPageLocators extends Setup {
+    WebDriver driver = getDriver();
+
     //locators for targeting input elements while adding a new patient
     private String firstName_xpath = "//input[@data-test-id='first-name']";
     public String middleName_xpath = "//input[@data-test-id='middle-name']";

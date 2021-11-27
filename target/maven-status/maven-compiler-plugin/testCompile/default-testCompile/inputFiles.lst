@@ -1,2 +1,4 @@
-C:\Users\dell\Documents\MPharmaTest\src\test\java\main\MainTest.java
-C:\Users\dell\Documents\MPharmaTest\src\test\java\main\Setup.java
+C:\Users\dell\Documents\GitHub\MPharmaTest\src\test\java\locators\PatientCreationPageLocators.java
+C:\Users\dell\Documents\GitHub\MPharmaTest\src\test\java\config\Setup.java
+C:\Users\dell\Documents\GitHub\MPharmaTest\src\test\java\step_definitions\PatientCreationStepDefinitions.java
+C:\Users\dell\Documents\GitHub\MPharmaTest\src\test\java\RunCucumberTest.java
