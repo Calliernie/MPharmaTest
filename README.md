@@ -1,5 +1,6 @@
 ## MPharmaTest
-Automated test with selenium written in Java - Python version is available here https://github.com/Calliernie/MPharmaTest-Python
+Automated test with selenium written in Java
+Python version is available here https://github.com/Calliernie/MPharmaTest-Python
 
 ## Prerequisites
 Install latest version of JDK\
